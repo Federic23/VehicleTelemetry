@@ -1,0 +1,14 @@
+CREATE KEYSPACE vehicle_telemetry_key WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1};
+
+CREATE TABLE IF NOT EXISTS users ( 
+  id      INT,
+  numero      INT,
+  PRIMARY KEY (( id )));
+
+INSERT INTO users (
+  id,    // INT
+  numero     // INT
+)
+VALUES (
+  1,
+  2);
