@@ -12,34 +12,52 @@ namespace apiTest.Controllers
     public class TestController : ApiController
     {
 
-        private ICluster _cluster;
-        private ISession _session;
-        private IMapper _mapper;
+        //private ICluster _cluster;
+        //private ISession _session;
+        //private IMapper _mapper;
 
-        public TestController()
-        {
-            _cluster = Cluster.Builder()
-                .AddContactPoint("127.0.0.1").WithPort(9042).Build();
-            
-            //.WithCloudSecureConnectionBundle(@"C:\Users\Usuario\Desktop\New folder\Project\VehicleTelemetry\test\apiTest\apiTest\secure-connect-vehicletelemetry.zip")
-            //.WithCredentials("OPrQXmDfCZelSdaYDEEXIGjT", "7XZ2ZCkYksMGfysQF8B2tX4LwaRxOZUc,_Ds9ZQ.hlZzwg+vXAMJyR4dYrMKC-22vvzaArEUhZkhQ0aYZ05DSNP9ZBg5M..aG7-tRjefwaeksB01Er9s+MzLZ7EZCmge")
+        //public TestController()
+        //{
+        //    _cluster = Cluster.Builder()
+        //        .AddContactPoint("127.0.0.1").WithPort(9042).Build();
 
 
-            _session = _cluster.Connect("vehicle_telemetry_key");
-            _mapper = new Mapper(_session);
-        }
+        //    _session = _cluster.Connect();
+        //    try
+        //    {
+        //        _session = _cluster.Connect("vehicle_telemetry_key");
+        //    }
+        //    catch (Exception)
+        //    {
+        //        _session.Execute(@"CREATE KEYSPACE vehicle_telemetry_key WITH REPLICATION = {'class' : 'SimpleStrategy', 'replication_factor' : 1};");
 
-        [HttpGet]
-        [Route("api/post")]
-        public IHttpActionResult Post()
-        {
-            Test testeo = new Test { id = 4, numero = 8 };
+        //        _session.Execute(@"CREATE TABLE IF NOT EXISTS users ( 
+        //                      id      INT,
+        //                      numero      INT,
+        //                      PRIMARY KEY (( id )));");
 
-            _mapper.Insert(testeo);
+        //        _session = _cluster.Connect("vehicle_telemetry_key");
+        //    }
 
-            var listOfPosts = _mapper.Fetch<Test>();
+        //    _session.Execute(@"CREATE TABLE IF NOT EXISTS users ( 
+        //                      id      INT,
+        //                      numero      INT,
+        //                      PRIMARY KEY (( id )));");
 
-            return Ok(listOfPosts.ToList());
-        }
+        //    _mapper = new Mapper(_session);
+        //}
+
+        //[HttpGet]
+        //[Route("api/post")]
+        //public IHttpActionResult Post()
+        //{
+        //    Test testeo = new Test { id = 4, numero = 8 };
+
+        //    _mapper.Insert(testeo);
+
+        //    var listOfPosts = _mapper.Fetch<Test>();
+
+        //    return Ok(listOfPosts.ToList());
+        //}
     }
 }

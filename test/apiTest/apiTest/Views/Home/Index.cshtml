@@ -1,24 +1,23 @@
-﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+﻿
+    <h1>Vehicle Telemetry</h1>
+    <p class="lead">Aplicacion de Prototipo para guardado y visualizacion de datos por telemetria de los vehiculos</p>
+
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+        <h2>Requerimientos</h2>
+        <p>Para utilizar la aplicacion es necesario tener docker y docker compose instalado, y correr el archivo de docker-compose.yml
+        con el comando "docker-compose run", Ademas es encesario utilizar postman o similar para mandar las request a la API  </p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+        <h2>Proyecto</h2>
+        <p>Luego de iniciar el proyecto el mismo corre en https://localhost:44352/</p>
+        
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+        <h2>Uso</h2>
+        <p>1)  Hacer una consulta POST a https://localhost:44352/api/initialize sin ningun body, para iniciar la base de datos </p>
+        <p>2)  Hacer una consulta GET a https://localhost:44352/api/get para visualizar las entradas</p>
+        <p>3)  Hacer una consulta POST a https://localhost:44352/api/post con el body explicado en el archivo "ejemploregistro.json" para crear un nuevo </p>
+
     </div>
 </div>
